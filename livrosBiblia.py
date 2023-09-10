@@ -70,10 +70,14 @@ livros_da_biblia = {
     "Judas": 1,
     "Apocalipse": 22
 }
+def imprimir_tracos():
+    print("-" * 50)
+    
 def sortear_e_imprimir_salmo():
     # Sorteia um salmo de 1 a 150
     salmo_sorteado = random.randint(1, 150)
     print(f"Leia Salmos {salmo_sorteado}!")
+    imprimir_tracos()
     
     
 def verificar_e_imprimir_proverbio():
@@ -86,6 +90,8 @@ def verificar_e_imprimir_proverbio():
     #if dia_atual == dia_para_proverbio:
         # Se for o dia específico, imprima uma mensagem para ler um versículo de Provérbios
     print(f"Leia também Provérbios {dia_atual}!")
+    imprimir_tracos()
+    
 
 def sortear_livro_e_capitulo():
     # Sorteia um livro da lista de livros
@@ -99,10 +105,14 @@ def sortear_livro_e_capitulo():
     
     return livro_sorteado, capitulo_sorteado
 
+
+
 def imprimir_resultado():
+    imprimir_tracos()
     livro, capitulo = sortear_livro_e_capitulo()
     resultado = f"Hoje você vai ler: {livro} Capítulo {capitulo}."
     print(resultado)
+    imprimir_tracos()
 
 # Chame a função imprimir_resultado() para obter o resultado
 imprimir_resultado()
