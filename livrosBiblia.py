@@ -1,87 +1,114 @@
+import datetime
 import random
 
+# Lista de livros da Bíblia com o número de capítulos correspondentes
+livros_da_biblia = {
+    "Gênesis": 50,
+    "Êxodo": 40,
+    "Levítico": 27,
+    "Números": 36,
+    "Deuteronômio": 34,
+    "Josué": 24,
+    "Juízes": 21,
+    "Rute": 4,
+    "1 Samuel": 31,
+    "2 Samuel": 24,
+    "1 Reis": 22,
+    "2 Reis": 25,
+    "1 Crônicas": 29,
+    "2 Crônicas": 36,
+    "Esdras": 10,
+    "Neemias": 13,
+    "Ester": 10,
+    "Jó": 42,
+    "Salmos": 150,
+    "Provérbios": 31,
+    "Eclesiastes": 12,
+    "Cânticos": 8,
+    "Isaías": 66,
+    "Jeremias": 52,
+    "Lamentações": 5,
+    "Ezequiel": 48,
+    "Daniel": 12,
+    "Oséias": 14,
+    "Joel": 3,
+    "Amós": 9,
+    "Obadias": 1,
+    "Jonas": 4,
+    "Miquéias": 7,
+    "Naum": 3,
+    "Habacuque": 3,
+    "Sofonias": 3,
+    "Ageu": 2,
+    "Zacarias": 14,
+    "Malaquias": 4,
+    "Mateus": 28,
+    "Marcos": 16,
+    "Lucas": 24,
+    "João": 21,
+    "Atos dos Apóstolos": 28,
+    "Romanos": 16,
+    "1 Coríntios": 16,
+    "2 Coríntios": 13,
+    "Gálatas": 6,
+    "Efésios": 6,
+    "Filipenses": 4,
+    "Colossenses": 4,
+    "1 Tessalonicenses": 5,
+    "2 Tessalonicenses": 3,
+    "1 Timóteo": 6,
+    "2 Timóteo": 4,
+    "Tito": 3,
+    "Filemom": 1,
+    "Hebreus": 13,
+    "Tiago": 5,
+    "1 Pedro": 5,
+    "2 Pedro": 3,
+    "1 João": 5,
+    "2 João": 1,
+    "3 João": 1,
+    "Judas": 1,
+    "Apocalipse": 22
+}
+def sortear_e_imprimir_salmo():
+    # Sorteia um salmo de 1 a 150
+    salmo_sorteado = random.randint(1, 150)
+    print(f"Leia Salmos {salmo_sorteado}!")
+    
+    
+def verificar_e_imprimir_proverbio():
+    # Obter o dia atual
+    dia_atual = datetime.datetime.now().day
+    
+    # Dia específico para ler um versículo de Provérbios (altere conforme necessário)
+    #dia_para_proverbio = 15
+    
+    #if dia_atual == dia_para_proverbio:
+        # Se for o dia específico, imprima uma mensagem para ler um versículo de Provérbios
+    print(f"Leia também Provérbios {dia_atual}!")
+
 def sortear_livro_e_capitulo():
-    livros_biblia = [
-        {"livro": "Gênesis", "capitulos": 50},
-        {"livro": "Êxodo", "capitulos": 40},
-        {"livro": "Levítico", "capitulos": 27},
-        {"livro": "Números", "capitulos": 36},
-        {"livro": "Deuteronômio", "capitulos": 34},
-        {"livro": "Josué", "capitulos": 24},
-        {"livro": "Juízes", "capitulos": 21},
-        {"livro": "Rute", "capitulos": 4},
-        {"livro": "1 Samuel", "capitulos": 31},
-        {"livro": "2 Samuel", "capitulos": 24},
-        {"livro": "1 Reis", "capitulos": 22},
-        {"livro": "2 Reis", "capitulos": 25},
-        {"livro": "1 Crônicas", "capitulos": 29},
-        {"livro": "2 Crônicas", "capitulos": 36},
-        {"livro": "Esdras", "capitulos": 10},
-        {"livro": "Neemias", "capitulos": 13},
-        {"livro": "Ester", "capitulos": 10},
-        {"livro": "Jó", "capitulos": 42},
-        {"livro": "Salmos", "capitulos": 150},
-        {"livro": "Provérbios", "capitulos": 31},
-        {"livro": "Eclesiastes", "capitulos": 12},
-        {"livro": "Cânticos", "capitulos": 8},
-        {"livro": "Isaías", "capitulos": 66},
-        {"livro": "Jeremias", "capitulos": 52},
-        {"livro": "Lamentações", "capitulos": 5},
-        {"livro": "Ezequiel", "capitulos": 48},
-        {"livro": "Daniel", "capitulos": 12},
-        {"livro": "Oséias", "capitulos": 14},
-        {"livro": "Joel", "capitulos": 3},
-        {"livro": "Amós", "capitulos": 9},
-        {"livro": "Obadias", "capitulos": 1},
-        {"livro": "Jonas", "capitulos": 4},
-        {"livro": "Miquéias", "capitulos": 7},
-        {"livro": "Naum", "capitulos": 3},
-        {"livro": "Habacuque", "capitulos": 3},
-        {"livro": "Sofonias", "capitulos": 3},
-        {"livro": "Ageu", "capitulos": 2},
-        {"livro": "Zacarias", "capitulos": 14},
-        {"livro": "Malaquias", "capitulos": 4},
-        {"livro": "Mateus", "capitulos": 28},
-        {"livro": "Marcos", "capitulos": 16},
-        {"livro": "Lucas", "capitulos": 24},
-        {"livro": "João", "capitulos": 21},
-        {"livro": "Atos", "capitulos": 28},
-        {"livro": "Romanos", "capitulos": 16},
-        {"livro": "1 Coríntios", "capitulos": 16},
-        {"livro": "2 Coríntios", "capitulos": 13},
-        {"livro": "Gálatas", "capitulos": 6},
-        {"livro": "Efésios", "capitulos": 6},
-        {"livro": "Filipenses", "capitulos": 4},
-        {"livro": "Colossenses", "capitulos": 4},
-        {"livro": "1 Tessalonicenses", "capitulos": 5},
-        {"livro": "2 Tessalonicenses", "capitulos": 3},
-        {"livro": "1 Timóteo", "capitulos": 6},
-        {"livro": "2 Timóteo", "capitulos": 4},
-        {"livro": "Tito", "capitulos": 3},
-        {"livro": "Filemon", "capitulos": 1},
-        {"livro": "Hebreus", "capitulos": 13},
-        {"livro": "Tiago", "capitulos": 5},
-        {"livro": "1 Pedro", "capitulos": 5},
-        {"livro": "2 Pedro", "capítulos": 3},
-        {"livro": "1 João", "capitulos": 5},
-        {"livro": "2 João", "capitulos": 1},
-        {"livro": "3 João", "capitulos": 1},
-        {"livro": "Judas", "capitulos": 1},
-        {"livro": "Apocalipse", "capitulos": 22}
-    ]
+    # Sorteia um livro da lista de livros
+    livro_sorteado = random.choice(list(livros_da_biblia.keys()))
+    
+    # Determina o número máximo de capítulos para o livro sorteado
+    maximo_capitulos = livros_da_biblia[livro_sorteado]
+    
+    # Sorteia um número de capítulo entre 1 e o número máximo de capítulos
+    capitulo_sorteado = random.randint(1, maximo_capitulos)
+    
+    return livro_sorteado, capitulo_sorteado
 
-    livro_sorteado = random.choice(livros_biblia)
-    livro_escolhido = livro_sorteado["livro"]
+def imprimir_resultado():
+    livro, capitulo = sortear_livro_e_capitulo()
+    resultado = f"Hoje você vai ler: {livro} Capítulo {capitulo}."
+    print(resultado)
 
-    if livro_escolhido == "Gênesis":
-        capitulo_sorteado = random.randint(1, livro_sorteado["capitulos"])
-    else:
-        capitulo_sorteado = None  # Não especificou o capítulo para outros livros
+# Chame a função imprimir_resultado() para obter o resultado
+imprimir_resultado()
 
-    return livro_escolhido, capitulo_sorteado
+# Chame a função verificar_e_imprimir_proverbio() para verificar e imprimir o versículo de Provérbios, se for o dia específico
+verificar_e_imprimir_proverbio()
 
-livro, capitulo = sortear_livro_e_capitulo()
-if capitulo is not None:
-    print(f"O livro sorteado foi {livro} e o capítulo sorteado foi {capitulo}.")
-else:
-    print(f"O livro sorteado foi {livro}.")
+# Chame a função sortear_e_imprimir_salmo() para sortear e imprimir um salmo aleatório
+sortear_e_imprimir_salmo()
