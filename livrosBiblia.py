@@ -141,3 +141,7 @@ verificar_e_imprimir_proverbio()
 # Chame a função sortear_e_imprimir_salmo() para sortear e imprimir um salmo aleatório
 sortear_e_imprimir_salmo()
 imprime_quadro()
+
+
+input("Pressione Enter para sair...")
+
