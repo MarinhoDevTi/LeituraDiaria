@@ -72,26 +72,26 @@ livros_da_biblia = {
 }
 def imprimir_data_atual():
     data_atual = datetime.datetime.now()
-    print(data_atual.strftime("%d/%m/%Y %H:%M:%S"))
+    print(data_atual.strftime("|                %d/%m/%Y %H:%M:%S               |"))
 
 def caixa_data():
-    print("=" * 50)
+    print("|" + "=" * 50 + "|")
     imprimir_data_atual()
-    print("=" * 50)
+    print("|" +"=" * 50 + "|")
     
 def imprimir_tracos():
-    print("-" * 50)
+    print("|" +"-" * 50 + "|")
     
 def imprime_quadro():
-    print("+" * 50)
+    print("|" +"+" * 50 + "|")
     
 def sortear_e_imprimir_salmo():
     # Sorteia um salmo de 1 a 150
     salmo_sorteado = random.randint(1, 150)
-    print(f"Salmos {salmo_sorteado}!")
-    print("")
-    imprimir_tracos()
-    
+    print(f"| ////// Salmos {salmo_sorteado}!                                |")
+    print("|                                                  |")
+    imprimir_tracos()   
+     
     
 def verificar_e_imprimir_proverbio():
     # Obter o dia atual
@@ -102,7 +102,7 @@ def verificar_e_imprimir_proverbio():
     
     #if dia_atual == dia_para_proverbio:
         # Se for o dia específico, imprima uma mensagem para ler um versículo de Provérbios
-    print(f"Provérbios {dia_atual}!")
+    print(f"| ////// Provérbios {dia_atual}!                            |")
     imprimir_tracos()
     
 
@@ -125,10 +125,10 @@ def imprimir_resultado():
     imprime_quadro()
     #imprimir_tracos()
     livro, capitulo = sortear_livro_e_capitulo()
-    print("Hoje você vai Ler: ")
-    imprimir_tracos()
-    resultado = f"{livro} Capítulo {capitulo}."
-    print("")
+    print("| //////         Hoje você vai Ler:        //////  |")
+    imprimir_tracos() 
+    resultado = f"|////// {livro} Capítulo {capitulo}                       |"
+    print("|                                                  |")
     print(resultado)
     imprimir_tracos()
 
