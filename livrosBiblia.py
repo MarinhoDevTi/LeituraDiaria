@@ -88,7 +88,7 @@ def imprime_quadro():
 def sortear_e_imprimir_salmo():
     # Sorteia um salmo de 1 a 150
     salmo_sorteado = random.randint(1, 150)
-    print(f"| ////// Salmos {salmo_sorteado}!                                |")
+    print(f"| ////// Salmos {salmo_sorteado}")
     print("|                                                  |")
     imprimir_tracos()   
      
@@ -127,7 +127,7 @@ def imprimir_resultado():
     livro, capitulo = sortear_livro_e_capitulo()
     print("| //////         Hoje você vai Ler:        //////  |")
     imprimir_tracos() 
-    resultado = f"|////// {livro} Capítulo {capitulo}                       |"
+    resultado = f"|////// {livro} Capítulo {capitulo}"
     print("|                                                  |")
     print(resultado)
     imprimir_tracos()
